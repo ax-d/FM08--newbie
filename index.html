@@ -1,41 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
   <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Four card feature section</title>
 
 
 </head>
-<body>
+
+<body class="page">
+
+  <header class="page__header">
+    <div class="container container--header">
+      <h1 class="title header__title">
+        Reliable, efficient delivery
+      </h1>
+      <h2 class="title header__sub-title">
+        Powered by Technology
+      </h2>
   
-  Reliable, efficient delivery
-  Powered by Technology
+      <p class="copy header__copy">
+        Our Artificial Intelligence powered tools use millions of project data points
+        to ensure that your project is successful
+      </p>
+    </div>
+  </header>
 
-  Our Artificial Intelligence powered tools use millions of project data points 
-  to ensure that your project is successful
+  <main class="page__content">
+    <article class="card card--supervisor">
+      <div class="container">
+        <h3 class="title card--title">
+          Supervisor
+        </h3>
+        <p class="copy card--copy">
+          Monitors activity to identify project roadblocks
+        </p>
+        <img class="card--img" src="/img/icon-supervisor.svg" alt="supervisor icon">
+      </div>
+    </article>
 
-  Supervisor
-  Monitors activity to identify project roadblocks
+    <article class="card card--team">
+      <div class="container">
+        <h3 class="title card--title">
+          Team Builder
+        </h3>
+        <p class="copy card--copy">
+          Scans our talent network to create the optimal team for your project
+        </p>
+        <img class="card--img" src="/img/icon-team-builder.svg" alt="team-builder icon">
+      </div>
+    </article>
 
-  Team Builder
-  Scans our talent network to create the optimal team for your project
+    <article class="card card--karma">
+      <div class="container">
+        <h3 class="title card--title">
+          Karma
+        </h3>
+        <p class="copy card--copy">
+          Regularly evaluates our talent to ensure quality
+        </p>
+        <img class="card--img" src="/img/icon-karma.svg" alt="karma icon">
+      </div>
+    </article>
 
-  Karma
-  Regularly evaluates our talent to ensure quality
+    <article class="card card--calculator">
+      <div class="container">
+        <h3 class="title card--title">
+          Calculator
+        </h3>
+        <p class="copy card--copy">
+          Uses data from past projects to provide better delivery estimates
+        </p>
+        <img class="card--img" src="/img/icon-calculator.svg" alt="calculator icon">
+      </div>
+    </article>
+  </main>
 
-  Calculator
-  Uses data from past projects to provide better delivery estimates
-
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">AX-d</a>.
-    </p>
+  <footer class="page__footer">
+    <div class="container">
+      <p class="copy attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="link">Frontend Mentor</a>.
+        Coded by <a href="#"
+        class="link">AX-d</a>.
+      </p>
+    </div>
   </footer>
 </body>
+
 </html>
