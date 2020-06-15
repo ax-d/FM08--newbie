@@ -19,12 +19,6 @@
 
 }
 
-.card {
-  width: 83%;
-  margin: 0 auto;
-  position: relative;
-}
-
 .title {
   color: hsl(234, 12%, 34%);
 }
@@ -34,11 +28,13 @@
 }
 
 .card {
-  background: rgb(255,255,255);
-  box-shadow: 0 10px 15px -5px rgba(0,0,0,0.2);
+  position: relative;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  margin-bottom: 24px;
-  min-height: 222px;
+  margin:0 auto 24px auto;
+  max-width: 350px;
+  height: 250px;
 }
 
 .card::before {
@@ -53,6 +49,7 @@
 .link {
   text-decoration: none;
 }
+
 /* start page__header  */
 .page__header {
   text-align: center;
@@ -139,25 +136,116 @@
 }
 /* end page__footer */
 
-@media only screen and (max-width: 1440px) {
-  /* start page__header  */
-.container--header {
-  margin-top: 77px;
+@media only screen and (min-width: 800px) {
+    /* start page__header  */
+    .container--header {
+      margin-top: 77px;
+    }
+  
+    .header__title {
+      font-size: 2.25rem;
+    }
+  
+    .header__sub-title {
+      font-size: 2.25rem;
+      margin-top: -3px;
+    }
+  
+    .header__copy {
+      width: 39%;
+      min-width: 418px;
+      margin-top: 15px;
+    }
+  
+    /* end page__header  */
+
+      /* start page__content */
+  .page__content {
+    display: grid;
+    grid-template-columns: 350px 350px;
+    grid-template-rows: 250px 250px;
+    grid-template-areas: "left right""left right";
+    margin-top: 63px;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 30px;
+  }
+
+  .card--supervisor {
+    grid-area: left;
+    align-self: start;
+  }
+
+  .card--team {
+    grid-area: left;
+    align-self: end;
+  }
+
+  .card--karma {
+    grid-area: right;
+    align-self: start;
+  }
+
+  .card--calculator {
+    grid-area: right;
+    align-self: end;
+
+  }
+
+  /* end page__content */
+  .card {
+    margin: 0;
+  }
+
+  .card--title {
+    margin: 10px 0 0 -3px;
+    letter-spacing: .5px
+  }
+
+  .card--copy {
+    margin: 9px 0 0 -3px;
+    letter-spacing: .1px;
+  }
+
+  .card--img {
+    width: 64px;
+    right: 32px;
+    bottom: 30px;
+  }
 }
 
-.header__title {
-  font-size: 2.25rem;
-}
+@media only screen and (min-width: 1180px) {
+  .page {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 
-.header__sub-title {
-font-size: 2.25rem;
-margin-top: -3px;
-}
+  /* start page__content */
+  .page__content {
+ 
+    grid-template-columns: 350px 350px 350px;
+    grid-template-rows: 250px 250px;
+    grid-template-areas: "left middle right""left middle right";
+  }
 
-.header__copy {
-  width: 39%;
-  margin-top: 15px;
-}
+  .card--supervisor {
+    align-self: initial;
+  }
 
-  /* end page__header  */
+  .card--team {
+    grid-area: middle;
+    align-self: start;
+  }
+
+  .card--karma {
+    grid-area: middle;
+    align-self: end;
+  }
+
+  .card--calculator {
+    align-self: initial;
+
+  }
+
+  /* end page__content */
 }
