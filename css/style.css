@@ -81,6 +81,7 @@
   margin: 16px auto 0;
   letter-spacing: .1px;
   line-height: 1.65;
+  max-width: 335px;
 }
 
 /* end page__header */
